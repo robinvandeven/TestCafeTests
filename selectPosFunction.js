@@ -26,20 +26,25 @@ import { Selector } from 'testcafe';
 
             await t 
 //          Select the POS function from the dropdown menu
-            .click(posFunction)     
+            .click(posFunction);     
 
             await t 
 //          Type the innertext of the POS function in the 'Description' field  
-            .typeText('input[name="SelectedButton\\2e Description0"]', text)
+            .typeText('input[name="SelectedButton\\2e Description0"]', text);
 
-//          Click 'OK' Button
-            .switchToMainWindow();
-
-            await t.expect(Selector("span#dijit_form_Button_0").visible).ok();
+//          Click 'OK' Button 
             await t 
-           .click("span#dijit_form_Button_0")     
-            
+            .switchToMainWindow()
+            .expect(Selector("span#dijit_form_Button_0").visible).ok()
+            .hover("span#dijit_form_Button_0")
+            .click("div#EditDialog span.dijit.dijitReset.dijitInline.dijitButton.dijitButtonFocused.dijitFocused");
+
+        // var okButton = Selector("div#EditDialog span.dijit.dijitReset.dijitInline.dijitButton.dijitButtonFocused.dijitFocused > span");
+        // await t.click(okButton);
+
             };
+
+            
    
            
    

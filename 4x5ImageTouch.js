@@ -7,6 +7,7 @@
        
            test('Create new keyboard layout', async t => {
                 var layoutName = "TestCafe 4x5 Touch Image";
+                   
 
                await t
                // Log in
@@ -56,8 +57,7 @@
                     .doubleClick(buttons[i])
                     .doubleClick(buttons[i])
                    
-                    .click(" #Keypad_3b089254-52f1-4543-bbe0-3e8a7b470b13_btn_" + i + " > div.tijitKeyLayout2EditIcon.dialogEdit")
-
+                    .click("#Keypad_3b089254-52f1-4543-bbe0-3e8a7b470b13_btn_" + i + " > div.tijitKeyLayout2EditIcon.dialogEdit")
                     await selectPosFunction(t)
                 }
  
