@@ -35,12 +35,8 @@ import { Selector } from 'testcafe';
 //          Click 'OK' Button 
             await t 
             .switchToMainWindow()
-            .expect(Selector("span#dijit_form_Button_0").visible).ok()
-            .hover("span#dijit_form_Button_0")
-            .click("div#EditDialog span.dijit.dijitReset.dijitInline.dijitButton.dijitButtonFocused.dijitFocused");
-
-        // var okButton = Selector("div#EditDialog span.dijit.dijitReset.dijitInline.dijitButton.dijitButtonFocused.dijitFocused > span");
-        // await t.click(okButton);
+            .click(Selector('span').withAttribute('data-dialog-button', 'ok'))   
+ 
 
             };
 
@@ -49,4 +45,3 @@ import { Selector } from 'testcafe';
            
    
 
-            
