@@ -52,7 +52,7 @@
                                                                                      
                }
 
-               for(var i = 0; i<buttons.length; i++){
+               for(var i = 0; i<1; i++){
                    await t
                    .doubleClick(buttons[i])
                    .doubleClick(buttons[i])
