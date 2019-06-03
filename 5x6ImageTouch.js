@@ -4,7 +4,7 @@
        
        
        fixture `Create keyboard layout`
-           .page `http://10.186.71.222/WebApp/WEBAPP/Home/Home/`;
+           .page `http://10.186.71.225/WebApp/WEBAPP/Home/Home/`;
        
            test('Create new keyboard layout', async t => {
             var layoutName = "TestCafe 5x6 Touch Image";
